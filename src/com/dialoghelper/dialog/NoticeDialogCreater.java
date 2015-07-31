@@ -26,7 +26,7 @@ public class NoticeDialogCreater extends DialogCreater{
 		((NoticeDialogHolder)dialogHolder).tv_title=(TextView) dialogView.findViewById(R.id.tv_title);
 		((NoticeDialogHolder)dialogHolder).tv_detail=(TextView) dialogView.findViewById(R.id.tv_detail);
 		((NoticeDialogHolder)dialogHolder).tv_sure=(TextView) dialogView.findViewById(R.id.tv_sure);
-		dialog=DialogUtils.createDialog(mActivity, dialogView, R.style.Trans_Fullscreen);
+		dialog=DialogUtils.createDialogCenter(mActivity, dialogView, R.style.Trans_Fullscreen);
 	}
 	
     public	class NoticeDialogHolder extends DialogHolder{

@@ -14,7 +14,7 @@ import android.view.WindowManager;
  * 时间: 2015年7月30日
  */
 public class DialogUtils {
-	public static Dialog createDialog(Activity activity,View view,int style){
+	public static Dialog createDialogCenter(Activity activity,View view,int style){
 		Dialog dialog=new Dialog(activity,style);
 		dialog.setContentView(view);
 		Window dialogWindow =dialog.getWindow();
@@ -22,6 +22,18 @@ public class DialogUtils {
 		dialogLayoutParams.width=LayoutParams.MATCH_PARENT;
 		dialogLayoutParams.height=LayoutParams.WRAP_CONTENT;
 		dialogWindow.setGravity(Gravity.CENTER);
+		dialog.setCancelable(false);
+		return dialog;
+	}
+	
+	public static Dialog createDialogButtom(Activity activity,View view,int style){
+		Dialog dialog=new Dialog(activity,style);
+		dialog.setContentView(view);
+		Window dialogWindow =dialog.getWindow();
+		WindowManager.LayoutParams dialogLayoutParams= dialogWindow.getAttributes();
+		dialogLayoutParams.width=LayoutParams.MATCH_PARENT;
+		dialogLayoutParams.height=LayoutParams.WRAP_CONTENT;
+		dialogWindow.setGravity(Gravity.BOTTOM);
 		dialog.setCancelable(false);
 		return dialog;
 	}
